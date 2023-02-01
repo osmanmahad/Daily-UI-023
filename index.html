@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css" />
+    <title>Daily-UI-23</title>
+  </head>
+  <body>
+    <div class="wrapper">
+    <div class="custom">
+      <h1>Customizable Boarding Pass</h1>
+      <p>Fill in the fields belows to create a custom boarding pass.</p>       
+        <div class="airline_selection">
+          <p>Select an airline</p>
+          <select id="airlines">
+            <option value="">Select an Airline</option>
+            <option value="ac">Air Canada</option>
+            <option value="dl">Delta Airlines</option>
+            <option value="qa">Qatar Airways</option>
+            <option value="sa">Singapore Airlines</option>
+            <option value="em">Emirates</option>
+            <option value="qn">Qantas Airways</option>
+            <option value="ta">Turkish Airlines</option>
+            <option value="af">Air France</option>
+            <option value="ka">Korean Air</option>
+            <option value="si">Swiss International Air Lines</option>
+            <!-- Add more options for the remaining airlines -->
+          </select>
+      </div>
+      <div class="airports">
+        <div class="departure_airport">
+          <p>Select a departure airport</p>
+          <select id="airports-select-departure">
+            <option value="">Select an airport</option>
+            <option value="SFO">
+              San Francisco International Airport (SFO)
+            </option>
+            <option value="JFK">
+              John F. Kennedy International Airport (JFK)
+            </option>
+            <option value="LAX">Los Angeles International Airport (LAX)</option>
+          </select>
+        </div>
+        <div class="airrival_airport">
+          <p>Select a airrival airport</p>
+          <select id="airports-select-airrival">
+            <option value="">Select an airport</option>
+            <option value="SFO">
+              San Francisco International Airport (SFO)
+            </option>
+            <option value="JFK">
+              John F. Kennedy International Airport (JFK)
+            </option>
+            <option value="LAX">Los Angeles International Airport (LAX)</option>
+          </select>
+        </div>
+      </div>
+      <div class="times">
+        <div class="departure_airport">
+          <p>Select a departure time</p>
+          <select id="start-time-select">
+            <option value="">Select a time</option>
+            <option value="0900">09:00</option>
+            <option value="1000">10:00</option>
+            <option value="1100">11:00</option>
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1500">15:00</option>
+            <option value="1600">16:00</option>
+            <option value="1700">17:00</option>
+            <option value="1800">18:00</option>
+          </select>
+        </div>
+        <div class="airrival_airport">
+          <p>Select a airrival time</p>
+          <select id="end-time-select">
+            <option value="">Select a time</option>
+            <option value="0900">09:00</option>
+            <option value="1000">10:00</option>
+            <option value="1100">11:00</option>
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1500">15:00</option>
+            <option value="1600">16:00</option>
+            <option value="1700">17:00</option>
+            <option value="1800">18:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="name_input">
+        <p>Enter name</p>
+        <input type="text" id="name_input" />
+      </div>
+      <div class="seat_number_type">
+        <div class="seat_type">
+            <p>Select seat type</p>
+            <select id="flight-types-select">
+                <option value="">Select a flight type</option>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+            </select>
+        </div>
+        <div class="seat_number">
+            <p>Select seat number</p><select id="seats-select">
+                <option value="">Select a seat</option>
+                <option value="1A">1A</option>
+                <option value="2B">2B</option>
+                <option value="3C">3C</option>
+                <option value="4D">4D</option>
+                <option value="5E">5E</option>
+                <option value="6F">6F</option>
+                <option value="7G">7G</option>
+                <option value="8H">8H</option>
+                <option value="9I">9I</option>
+                <option value="10J">10J</option>
+              </select>
+          </div>
+      </div>
+      
+    </div>
+
+    <div class="pass">
+      <div class="top_section">
+        <div class="logo_and_name">
+          <div id="logo"></div>
+        </div>
+        <div class="aiports">
+          <div class="departure">
+            <div id="airport-name-departure"></div>
+            <div id="airport-code-departure"></div>
+          </div>
+          <div class="middle">
+            <i class="fa-solid fa-minus"></i> </i
+            >
+            <i class="fa-solid fa-minus"></i>
+            <i class="fa-solid fa-plane"></i>
+            <i class="fa-solid fa-minus"></i> </i
+            ></i>
+            <i class="fa-solid fa-minus"></i>
+          </div>
+
+          <div class="arrival">
+            <div id="airport-name-airrival"></div>
+            <div id="airport-code-airrival"></div>
+          </div>
+        </div>
+      </div>
+      <div class="time">
+        <div class="departure_time">
+          <h1>Depart</h1>
+          <div id="start-time"></div>
+        </div>
+        <div class="arrival_time">
+          <h1>Arrive</h1>
+          <div id="end-time"></div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="passanger_name">
+          <p>Passanger Name</p>
+          <div class="name"><div id="name_output"></div></div>
+        </div>
+        <div class="flight_type">
+          <p>Flight type</p>
+          <div id="selected-flight-type"></div>
+        </div>
+        <div class="seat_number">
+          <p>Seat Number</p>
+          <div id="selected-seat"></div>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <div class="qrcode">
+        <img src="./images/qr-blank.svg" />
+      </div>
+    </div>
+    <a href="./index.html"><button id="resetBtn" >Reset</button></a>
+    </div>
+    
+  </body>
+  <script
+    src="https://kit.fontawesome.com/eb49e3ed3b.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
+</html>
