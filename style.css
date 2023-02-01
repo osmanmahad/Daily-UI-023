@@ -141,8 +141,8 @@ select {
 
 #airport-code-departure,
 #airport-code-airrival {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .time h1 {
@@ -161,6 +161,7 @@ select {
 .info p {
   font-weight: 800;
   margin-bottom: 5px;
+  font-size: 12px;
 }
 
 .fa-plane {
